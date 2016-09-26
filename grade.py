@@ -180,6 +180,9 @@ def group_add(tbl_name, g_id, s_id):
             print "Error %s:" % e.args[0]
             sys.exit(1)
             
+    else:
+        print 'Invalid option'
+
 # Implement: If a student already has a grade, confirm before replacing.  
 def add_grade(tbl_name, group_choice):
     print "Adding scores to {0}".format(quiz_input)
@@ -312,6 +315,10 @@ if __name__ == '__main__':
                     loop_flag = True
                 elif int(usr_ch) ==2 :
                     loop_flag = False
+                else:
+                    print 'Invalid option'
+        else:
+            print 'Invalid option'
 
     elif int(choice) == 3:
         quiz_input = raw_input("Enter name of quiz/homework:   ")
@@ -320,7 +327,10 @@ if __name__ == '__main__':
         grade_choice = raw_input('Are you adding grades \n'
                                  '1. groupwise or \n'
                                  '2. individually ?:   ')
-        add_grade(tbl_name, int(grade_choice))
+        if int(grade_choice) == 1 or int(grade_choice) == 2:
+            add_grade(tbl_name, int(grade_choice))
+        else:
+            print 'Invalid option'
 
     elif int(choice) == 4:
         fn = raw_input('Enter file name to import grades from:  ')
