@@ -368,4 +368,5 @@ if __name__ == '__main__':
 
         for row in rows:
             nf.write("{0},{1},{2}\n".format(row[0],row[1],row[2]))
-        
+    else:
+        print 'Invalid option'
