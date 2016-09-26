@@ -14,9 +14,13 @@ Set SQL_DB_PATH environment variable to the directory where the sqlite database 
 ** Format of files
 Current version of code can import and export grades from and to .csv files 
 
-No header needed for the files
+No header needed for the grade files
 
-The format of the .csv file is as follows.
+Format of .csv roster file
+
+<Last Name>, <First Name>
+
+Format of .csv grade files is as follows.
 
 <Last Name>, <First Name>, <Grade>
 
