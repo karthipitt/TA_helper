@@ -1,0 +1,18 @@
+* TA Grading Utility
+Small utility to help teaching assistants with entering and exporting grades, making the process faster and error proof. 
+* Using the code
+Clone the git repository
+Check if sqlite3 module for python is already installed
+Run code grade.py
+* Important points to note
+Code is self explanatory, but it is important to note the following:
+** Export Environment variable
+Set SQL_DB_PATH environment variable to the directory where the sqlite database is to be stored.
+** Format of files
+Current version of code can import and export grades from and to .csv files 
+No header needed for the files
+The format of the .csv file is as follows.
+<Last Name>, <First Name>, Grade
+
+
+ 
