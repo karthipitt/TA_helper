@@ -229,7 +229,7 @@ def add_grade(tbl_name, group_choice):
             for row in rows:
                 print row[0],row[1],row[2],row[3]
 
-            id_input = raw_input("Choose the correct ID of the student:  ")
+            id_input = int(raw_input("Choose the correct ID of the student:  "))
             if group_choice == 1:
                 cur.execute('SELECT GID from {tn} '
                             'WHERE ID = {sid}'.format(tn=tbl_name, 
@@ -246,7 +246,7 @@ def add_grade(tbl_name, group_choice):
                                 'WHERE ID={sid}'.format(tn=tbl_name,
                                                         cn=quiz_input,
                                                         grade=score_input,
-                                                        sid=rows[0][0]))
+                                                        sid=id_input))
                     con.commit()
                 except lite.Error, e:
                     con.rollback()
